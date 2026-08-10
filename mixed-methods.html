@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRADE Mixed Methods Project Group · Colombia GRADE Network</title>
+<meta name="description" content="Micrositio del GRADE Mixed Methods Project Group: promover el enfoque GRADE en síntesis de evidencia de métodos mixtos y desarrollo de guías.">
+<style>
+  :root{
+    --rojo:#b91c22; --tinta:#17181c; --gris:#5c616b; --gris-suave:#9096a0;
+    --teal:#0e7c7b; --linea:#e8e8ea; --crudo:#faf9f7; --blanco:#ffffff; --max-w:1060px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  ::selection{background:var(--teal);color:#fff}
+  body{font-family:'Inter','Segoe UI',Helvetica,Arial,sans-serif;color:var(--tinta);background:var(--blanco);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  a{color:var(--teal)}
+  a:hover{text-decoration:underline}
+  .inner{max-width:var(--max-w);margin:0 auto;padding:0 1.4rem}
+  .tricolor{height:4px;display:flex}
+  .tricolor .y{flex:2;background:#FCD116}
+  .tricolor .b{flex:1;background:#003893}
+  .tricolor .r{flex:1;background:#CE1126}
+  nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+  nav .inner{display:flex;align-items:center;justify-content:space-between;padding-top:.9rem;padding-bottom:.9rem;gap:1rem}
+  .wordmark{font-weight:900;font-size:1.15rem;letter-spacing:-.02em;color:var(--tinta);white-space:nowrap;text-decoration:none}
+  .wordmark em{font-style:normal;color:var(--rojo)}
+  nav .volver{font-size:.82rem;font-weight:600;color:var(--gris);text-decoration:none}
+  nav .volver:hover{color:var(--tinta)}
+  .cab{background:linear-gradient(135deg,#f2faf9 0%,#e8f4f3 100%);border-bottom:1px solid var(--linea);padding:4.5rem 0 3.4rem}
+  .kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:1.2rem}
+  .kicker::before{content:"";width:34px;height:2px;background:var(--teal)}
+  .cab h1{font-size:clamp(2rem,4.6vw,3.1rem);font-weight:900;letter-spacing:-.03em;line-height:1.08;margin-bottom:1rem;max-width:18ch}
+  .cab h1 em{font-style:normal;color:var(--teal)}
+  .cab p{color:var(--gris);max-width:62ch;margin-bottom:1.6rem}
+  .badge{display:inline-block;background:#fff;border:1px solid var(--linea);border-radius:999px;padding:.4rem 1rem;font-size:.78rem;font-weight:700;color:var(--gris);margin-right:.5rem;margin-bottom:.5rem}
+  .badge em{font-style:normal;color:var(--rojo)}
+  section{padding:3.6rem 0}
+  .sec-head{display:grid;grid-template-columns:200px 1fr;gap:2rem;margin-bottom:2.4rem;align-items:start}
+  .num{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);padding-top:.55rem;border-top:2px solid var(--tinta)}
+  .sec-head h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:900;letter-spacing:-.03em;line-height:1.1}
+  .sec-head p{margin-top:.8rem;color:var(--gris);max-width:62ch}
+  .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem}
+  .obj h3{font-size:1rem;font-weight:800;margin-bottom:.5rem}
+  .obj h3::before{content:"";display:block;width:22px;height:3px;background:var(--teal);margin-bottom:.9rem}
+  .obj p{font-size:.9rem;color:var(--gris)}
+  .colab{margin-top:2.2rem;font-size:.85rem;color:var(--gris);border-top:1px solid var(--linea);padding-top:1.1rem}
+  .colab b{color:var(--tinta)}
+  section.gris{background:var(--crudo);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+  .miembros{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .miembro{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:1.3rem 1.5rem}
+  .miembro .rol{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.4rem}
+  .miembro h4{font-size:.98rem;font-weight:800;line-height:1.3}
+  .miembro p{font-size:.84rem;color:var(--gris);margin-top:.3rem}
+  .pub{display:grid;grid-template-columns:1fr auto;gap:1.2rem;align-items:start;padding:1.3rem 0;border-bottom:1px solid var(--linea)}
+  .pub:first-of-type{border-top:1px solid var(--linea)}
+  .pub .meta{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gris-suave);margin-bottom:.2rem}
+  .pub h3{font-size:1.05rem;font-weight:800;letter-spacing:-.01em}
+  .pub p{font-size:.88rem;color:var(--gris);margin-top:.25rem;max-width:70ch}
+  .pill{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;border-radius:999px;padding:.35rem .8rem;white-space:nowrap}
+  .pill.done{background:#eaf6ee;color:#1c7c3d}
+  .pill.curso{background:#e8f4f3;color:var(--teal)}
+  .pill.plan{background:#f4f4f5;color:var(--gris)}
+  .cta{background:var(--tinta);color:#fff;text-align:center;padding:4rem 1.4rem}
+  .cta h2{font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:900;letter-spacing:-.02em;margin-bottom:.8rem}
+  .cta h2 em{font-style:normal;color:#5eead4}
+  .cta p{color:#b9bdc6;max-width:52ch;margin:0 auto 1.8rem}
+  .cta a.btn{display:inline-block;background:var(--teal);color:#fff;font-weight:700;font-size:.92rem;border-radius:999px;padding:.85rem 1.9rem;text-decoration:none}
+  .cta a.btn:hover{background:#0a6362}
+  footer{background:#0f1013;color:#8b8f98;padding:2rem 0;font-size:.8rem}
+  footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+  footer a{color:#d5d8de}
+  .fuente{background:#f2faf9;border:1px solid #d8ebe9;color:#3c6664;font-size:.75rem;padding:.45rem .9rem;border-radius:8px;max-width:var(--max-w);margin:.9rem auto 0}
+  @media(max-width:840px){.sec-head{grid-template-columns:1fr;gap:.8rem}.num{border-top:none;padding-top:0}.cols3,.miembros{grid-template-columns:1fr}.pub{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="tricolor"><div class="y"></div><div class="b"></div><div class="r"></div></div>
+
+<nav>
+  <div class="inner">
+    <a href="index.html" class="wordmark"><em>GRADE</em> Colombia</a>
+    <a class="volver" href="index.html">← Volver al sitio principal</a>
+  </div>
+</nav>
+
+<div class="fuente">ℹ Contenido basado en los términos de referencia del grupo (marzo–mayo de 2023, revisados por el GRADE working group). Los estados de los productos se actualizarán a medida que avancen.</div>
+
+<header class="cab">
+  <div class="inner">
+    <div class="kicker">Project group · GRADE working group</div>
+    <h1>GRADE <em>Mixed Methods</em> Project Group</h1>
+    <p>Promovemos el enfoque GRADE en las síntesis de evidencia de métodos mixtos y en el desarrollo e implementación de guías. En estas síntesis se examina la relación y el grado de concordancia entre los datos cuantitativos y cualitativos de los estudios primarios — para comprender y validar los resultados, resaltar inconsistencias en la evidencia disponible y evaluar si ambos tipos de datos abordan aspectos distintos de un mismo fenómeno.</p>
+    <span class="badge">Liderado desde la <em>Colombia GRADE Network</em></span>
+    <span class="badge">Enlace G3: Holger Schünemann</span>
+  </div>
+</header>
+
+<section>
+  <div class="inner">
+    <div class="sec-head">
+      <div class="num">01 — Objetivos</div>
+      <div>
+        <h2>Qué busca el grupo</h2>
+        <p>Siete objetivos específicos, organizados en tres frentes de trabajo.</p>
+      </div>
+    </div>
+    <div class="cols3">
+      <div class="obj">
+        <h3>Certeza de la evidencia en métodos mixtos</h3>
+        <p>Desarrollar y resolver los problemas de la certeza en la evidencia (CiE) GRADE para revisiones sistemáticas que integran estudios cuantitativos y cualitativos, incluyen estudios primarios de métodos mixtos, o ambos — y para su uso en el desarrollo de guías.</p>
+      </div>
+      <div class="obj">
+        <h3>De la evidencia a la decisión</h3>
+        <p>Abordar los retos de los marcos EtD cuando la toma de decisiones incluye estudios cuantitativos y cualitativos, y desarrollar y difundir tablas de evidencia GRADE (perfiles de evidencia y tablas SoF) para preguntas de revisiones de métodos mixtos.</p>
+      </div>
+      <div class="obj">
+        <h3>Formación y orientación</h3>
+        <p>Producir materiales de entrenamiento y ejemplos, desarrollar la orientación oficial sobre GRADE en revisiones de métodos mixtos para el GRADE Book, y difundir el enfoque entre los grupos que hacen este tipo de revisiones.</p>
+      </div>
+    </div>
+    <p class="colab"><b>Colaboraciones:</b> el grupo trabaja articulado con los project groups de <b>Certainty of Evidence</b>, <b>CERQual</b> y <b>EtD</b> del GRADE working group, y recolecta ejemplos y casos de estudio de revisiones sistemáticas de métodos mixtos.</p>
+  </div>
+</section>
+
+<section class="gris">
+  <div class="inner">
+    <div class="sec-head">
+      <div class="num">02 — Equipo</div>
+      <div><h2>Quiénes lo integran</h2></div>
+    </div>
+    <div class="miembros">
+      <div class="miembro">
+        <div class="rol">Líder</div>
+        <h4>Juan José Yepes-Núñez</h4>
+        <p>Universidad de los Andes, Colombia · Director de la Colombia GRADE Network</p>
+      </div>
+      <div class="miembro">
+        <div class="rol">Enlace G3</div>
+        <h4>Holger Schünemann</h4>
+        <p>GRADE Guidance Group (G3)</p>
+      </div>
+      <div class="miembro">
+        <div class="rol">Historia</div>
+        <h4>Grupo co-fundado en 2023</h4>
+        <p>Por Juan José Yepes-Núñez y Claudia Valli, con la revisión del GRADE working group.</p>
+      </div>
+    </div>
+    <p class="colab" style="border-top:none;padding-top:0;margin-top:1.6rem"><b>Miembros:</b> Kelly Estrada Orozco, Olga Milena García, Óscar Muñoz Velandia, Andrés Mauricio García Sierra, Elodie Besnier, Gloria Isabel Niño Cruz, Ena Nino, Juan Camilo Cuya y Laura Yuriko González Teshima.</p>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="sec-head">
+      <div class="num">03 — Productos</div>
+      <div>
+        <h2>Entregables y avances</h2>
+        <p>Plan de trabajo 2023–2026 del grupo.</p>
+      </div>
+    </div>
+    <div class="pub">
+      <div>
+        <div class="meta">Artículo 1 · Año 1</div>
+        <h3>Comentario sobre el uso de GRADE en revisiones sistemáticas de métodos mixtos</h3>
+        <p>Sometido al Journal of Clinical Epidemiology como primer producto del grupo.</p>
+      </div>
+      <span class="pill curso">En curso</span>
+    </div>
+    <div class="pub">
+      <div>
+        <div class="meta">Artículo 2 · Años 1–2</div>
+        <h3>Encuesta sistemática de marcos para evaluar la certeza de la evidencia en revisiones de métodos mixtos</h3>
+        <p>Identificación de marcos potenciales para la evaluación de la CiE en síntesis que integran evidencia cuantitativa y cualitativa.</p>
+      </div>
+      <span class="pill curso">En curso</span>
+    </div>
+    <div class="pub">
+      <div>
+        <div class="meta">Artículo 3 · Año 2</div>
+        <h3>Encuesta sistemática de marcos para integrar datos cuantitativos y cualitativos en el desarrollo de guías</h3>
+        <p>Marcos de integración para la toma de decisiones y la formulación de recomendaciones.</p>
+      </div>
+      <span class="pill curso">En curso</span>
+    </div>
+    <div class="pub">
+      <div>
+        <div class="meta">Años 2–3</div>
+        <h3>Casos de estudio y artículos de orientación GRADE</h3>
+        <p>Desarrollo de casos de estudio para evaluar el impacto del marco GRADE en la CiE de revisiones de métodos mixtos, y artículos de orientación oficial (certeza y uso de EtD) en colaboración con los grupos CERQual, Certainty of Evidence y EtD.</p>
+      </div>
+      <span class="pill plan">Planeado</span>
+    </div>
+    <div class="pub">
+      <div>
+        <div class="meta">Encuentros</div>
+        <h3>Reuniones y talleres</h3>
+        <p>Reunión de mapeo en el Cochrane Colloquium 2023, teleconferencias periódicas del grupo y al menos un taller o webinar por año en encuentros del GRADE working group.</p>
+      </div>
+      <span class="pill done">Activo</span>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>¿Trabajas con <em>métodos mixtos</em>?</h2>
+  <p>El grupo recolecta ejemplos de revisiones sistemáticas de métodos mixtos y está abierto a investigadores interesados en la integración de evidencia cualitativa y cuantitativa en el enfoque GRADE.</p>
+  <a class="btn" href="mailto:co@gradeworkinggroup.org?subject=GRADE%20Mixed%20Methods%20Project%20Group">Escríbenos</a>
+</div>
+
+<footer>
+  <div class="inner">
+    <span>© 2026 GRADE Mixed Methods Project Group · Colombia GRADE Network</span>
+    <span><a href="index.html">Inicio</a> · <a href="https://www.gradeworkinggroup.org" target="_blank" rel="noopener">GRADE working group</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
