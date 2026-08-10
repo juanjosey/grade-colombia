@@ -47,6 +47,14 @@
   .galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:1rem;max-width:640px}
   .galeria img{width:100%;height:96px;object-fit:cover;border-radius:8px;border:1px solid var(--linea)}
   @media(max-width:840px){.galeria{grid-template-columns:repeat(2,1fr)}}
+  .tray-titulo{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo);margin:3rem 0 1.4rem;display:flex;align-items:center;gap:.6rem}
+  .tray-titulo::after{content:"";flex:1;height:1px;background:var(--linea)}
+  .hito{display:grid;grid-template-columns:110px 1fr;gap:1.6rem;padding:1rem 0;border-bottom:1px solid var(--linea)}
+  .hito:last-of-type{border-bottom:none}
+  .hito .anio2{font-weight:900;font-size:1.2rem;letter-spacing:-.02em;color:var(--rojo)}
+  .hito p{font-size:.88rem;color:var(--gris)}
+  .hito p b{color:var(--tinta)}
+  @media(max-width:840px){.hito{grid-template-columns:1fr;gap:.2rem}}
   .nota{background:var(--crudo);border:1px solid var(--linea);border-radius:14px;padding:1.4rem 1.6rem;margin-top:2.6rem;font-size:.9rem;color:var(--gris)}
   footer{background:var(--tinta);color:#b9bdc6;padding:2.2rem 0;font-size:.82rem}
   footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
@@ -128,6 +136,24 @@
         <div class="datos"><b>Colaboración:</b> Cochrane Colombia</div>
       </div>
       <span class="pill ok">Continuo</span>
+    </div>
+
+<div class="tray-titulo" data-es="Trayectoria de la red" data-en="Track record">Trayectoria de la red</div>
+    <div class="hito">
+      <div class="anio2">2011</div>
+      <p><span data-es="Arranca el programa nacional de guías de práctica clínica de Colombia, que introduce por primera vez GRADE en la toma de decisiones del país. " data-en="Colombia's national clinical practice guideline program begins, introducing GRADE into the country's decision-making for the first time. ">Arranca el programa nacional de guías de práctica clínica de Colombia, que introduce por primera vez GRADE en la toma de decisiones del país. </span><b>CINETS</b><span data-es=" —alianza de la Javeriana, la Nacional y la UdeA— lidera el desarrollo de la mayoría de las guías colombianas elaboradas con GRADE." data-en=" — an alliance of Javeriana, Nacional and UdeA — leads the development of most Colombian guidelines produced with GRADE."> —alianza de la Javeriana, la Nacional y la UdeA— lidera el desarrollo de la mayoría de las guías colombianas elaboradas con GRADE.</span></p>
+    </div>
+    <div class="hito">
+      <div class="anio2">2014</div>
+      <p data-es="Miembros de la red participan en el proyecto DECIDE, probando el marco de la evidencia a la decisión (EtD) en paneles de guías colombianos, y reciben una beca de COLCIENCIAS para evaluar la experiencia colombiana con GRADE en el programa nacional de guías." data-en="Network members take part in the DECIDE project, testing the evidence-to-decision (EtD) framework in Colombian guideline panels, and receive a COLCIENCIAS grant to evaluate Colombia's experience using GRADE in the national guideline program.">Miembros de la red participan en el proyecto DECIDE, probando el marco de la evidencia a la decisión (EtD) en paneles de guías colombianos, y reciben una beca de COLCIENCIAS para evaluar la experiencia colombiana con GRADE en el programa nacional de guías.</p>
+    </div>
+    <div class="hito">
+      <div class="anio2">2016</div>
+      <p><span data-es="Se establece el " data-en="The ">Se establece el </span><b>Javeriana GRADE Center</b><span data-es=", el primer centro GRADE de Latinoamérica, pieza clave en la formación de desarrolladores de guías y evaluadores de tecnologías en el país." data-en=" is established — the first GRADE centre in Latin America and a key player in training the country's guideline developers and health technology assessors.">, el primer centro GRADE de Latinoamérica, pieza clave en la formación de desarrolladores de guías y evaluadores de tecnologías en el país.</span></p>
+    </div>
+    <div class="hito">
+      <div class="anio2">2021</div>
+      <p><span data-es="Las cuatro universidades presentan formalmente la propuesta de la " data-en="The four universities formally submit the proposal for the ">Las cuatro universidades presentan formalmente la propuesta de la </span><b>Colombia GRADE Network</b><span data-es=" ante el GRADE Working Group. La red mantiene vínculos estrechos con Cochrane Colombia y con los grupos Cochrane del país." data-en=" to the GRADE Working Group. The network maintains close ties with Cochrane Colombia and the country's Cochrane groups."> ante el GRADE Working Group. La red mantiene vínculos estrechos con Cochrane Colombia y con los grupos Cochrane del país.</span></p>
     </div>
 
     <div class="nota">
