@@ -27,6 +27,13 @@
   .wordmark em{font-style:normal;color:var(--rojo)}
   nav .volver{font-size:.82rem;font-weight:600;color:var(--gris);text-decoration:none}
   nav .volver:hover{color:var(--tinta)}
+  .nav-right{display:flex;align-items:center;gap:1rem}
+  .lang-switch{display:flex;border:1px solid var(--linea);border-radius:999px;overflow:hidden}
+  .lang-switch button{
+    background:transparent;border:none;color:var(--gris);cursor:pointer;
+    font-size:.72rem;font-weight:700;padding:.3rem .7rem;font-family:inherit;
+  }
+  .lang-switch button.active{background:var(--tinta);color:#fff}
   .cab{background:linear-gradient(135deg,#f2faf9 0%,#e8f4f3 100%);border-bottom:1px solid var(--linea);padding:4.5rem 0 3.4rem}
   .kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:1.2rem}
   .kicker::before{content:"";width:34px;height:2px;background:var(--teal)}
@@ -81,140 +88,165 @@
 <nav>
   <div class="inner">
     <a href="index.html" class="wordmark"><em>GRADE</em> Colombia</a>
-    <a class="volver" href="index.html">← Volver al sitio principal</a>
+    <div class="nav-right">
+      <a class="volver" href="index.html" data-es="← Volver al sitio principal" data-en="← Back to the main site">← Volver al sitio principal</a>
+      <div class="lang-switch">
+        <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
   </div>
 </nav>
 
-<div class="fuente">ℹ Contenido basado en los términos de referencia del grupo (marzo–mayo de 2023, revisados por el GRADE working group). Los estados de los productos se actualizarán a medida que avancen.</div>
+<div class="fuente" data-es="ℹ Contenido basado en los términos de referencia del grupo (marzo–mayo de 2023, revisados por el GRADE working group). Los estados de los productos se actualizarán a medida que avancen." data-en="ℹ Content based on the group's terms of reference (March–May 2023, reviewed by the GRADE working group). Deliverable statuses will be updated as work progresses.">ℹ Contenido basado en los términos de referencia del grupo (marzo–mayo de 2023, revisados por el GRADE working group). Los estados de los productos se actualizarán a medida que avancen.</div>
 
 <header class="cab">
   <div class="inner">
     <div class="kicker">Project group · GRADE working group</div>
     <h1>GRADE <em>Mixed Methods</em> Project Group</h1>
-    <p>Promovemos el enfoque GRADE en las síntesis de evidencia de métodos mixtos y en el desarrollo e implementación de guías. En estas síntesis se examina la relación y el grado de concordancia entre los datos cuantitativos y cualitativos de los estudios primarios — para comprender y validar los resultados, resaltar inconsistencias en la evidencia disponible y evaluar si ambos tipos de datos abordan aspectos distintos de un mismo fenómeno.</p>
-    <span class="badge">Liderado desde la <em>Colombia GRADE Network</em></span>
-    <span class="badge">Enlace G3: Holger Schünemann</span>
+    <p data-es="Promovemos el enfoque GRADE en las síntesis de evidencia de métodos mixtos y en el desarrollo e implementación de guías. En estas síntesis se examina la relación y el grado de concordancia entre los datos cuantitativos y cualitativos de los estudios primarios — para comprender y validar los resultados, resaltar inconsistencias en la evidencia disponible y evaluar si ambos tipos de datos abordan aspectos distintos de un mismo fenómeno." data-en="We promote the GRADE approach in mixed methods evidence syntheses and in guideline development and implementation. These syntheses examine the relationship and degree of agreement between the quantitative and qualitative data of primary studies — to understand and validate findings, highlight inconsistencies in the available evidence, and assess whether the two types of data address different aspects of the same phenomenon.">Promovemos el enfoque GRADE en las síntesis de evidencia de métodos mixtos y en el desarrollo e implementación de guías. En estas síntesis se examina la relación y el grado de concordancia entre los datos cuantitativos y cualitativos de los estudios primarios — para comprender y validar los resultados, resaltar inconsistencias en la evidencia disponible y evaluar si ambos tipos de datos abordan aspectos distintos de un mismo fenómeno.</p>
+    <span class="badge"><span data-es="Liderado desde la " data-en="Led from the ">Liderado desde la </span><em>Colombia GRADE Network</em></span>
+    <span class="badge" data-es="Enlace G3: Holger Schünemann" data-en="G3 liaison: Holger Schünemann">Enlace G3: Holger Schünemann</span>
   </div>
 </header>
 
 <section>
   <div class="inner">
     <div class="sec-head">
-      <div class="num">01 — Objetivos</div>
+      <div class="num" data-es="01 — Objetivos" data-en="01 — Objectives">01 — Objetivos</div>
       <div>
-        <h2>Qué busca el grupo</h2>
-        <p>Siete objetivos específicos, organizados en tres frentes de trabajo.</p>
+        <h2 data-es="Qué busca el grupo" data-en="What the group aims to do">Qué busca el grupo</h2>
+        <p data-es="Siete objetivos específicos, organizados en tres frentes de trabajo." data-en="Seven specific objectives, organized into three streams of work.">Siete objetivos específicos, organizados en tres frentes de trabajo.</p>
       </div>
     </div>
     <div class="cols3">
       <div class="obj">
-        <h3>Certeza de la evidencia en métodos mixtos</h3>
-        <p>Desarrollar y resolver los problemas de la certeza en la evidencia (CiE) GRADE para revisiones sistemáticas que integran estudios cuantitativos y cualitativos, incluyen estudios primarios de métodos mixtos, o ambos — y para su uso en el desarrollo de guías.</p>
+        <h3 data-es="Certeza de la evidencia en métodos mixtos" data-en="Certainty of evidence in mixed methods">Certeza de la evidencia en métodos mixtos</h3>
+        <p data-es="Desarrollar y resolver los problemas de la certeza en la evidencia (CiE) GRADE para revisiones sistemáticas que integran estudios cuantitativos y cualitativos, incluyen estudios primarios de métodos mixtos, o ambos — y para su uso en el desarrollo de guías." data-en="Develop and address the challenges of GRADE certainty of evidence (CoE) for systematic reviews that integrate quantitative and qualitative studies, include primary mixed methods studies, or both — and for its use in guideline development.">Desarrollar y resolver los problemas de la certeza en la evidencia (CiE) GRADE para revisiones sistemáticas que integran estudios cuantitativos y cualitativos, incluyen estudios primarios de métodos mixtos, o ambos — y para su uso en el desarrollo de guías.</p>
       </div>
       <div class="obj">
-        <h3>De la evidencia a la decisión</h3>
-        <p>Abordar los retos de los marcos EtD cuando la toma de decisiones incluye estudios cuantitativos y cualitativos, y desarrollar y difundir tablas de evidencia GRADE (perfiles de evidencia y tablas SoF) para preguntas de revisiones de métodos mixtos.</p>
+        <h3 data-es="De la evidencia a la decisión" data-en="From evidence to decision">De la evidencia a la decisión</h3>
+        <p data-es="Abordar los retos de los marcos EtD cuando la toma de decisiones incluye estudios cuantitativos y cualitativos, y desarrollar y difundir tablas de evidencia GRADE (perfiles de evidencia y tablas SoF) para preguntas de revisiones de métodos mixtos." data-en="Address the challenges of EtD frameworks when decision-making includes quantitative and qualitative studies, and develop and disseminate GRADE evidence tables (evidence profiles and SoF tables) for mixed methods review questions.">Abordar los retos de los marcos EtD cuando la toma de decisiones incluye estudios cuantitativos y cualitativos, y desarrollar y difundir tablas de evidencia GRADE (perfiles de evidencia y tablas SoF) para preguntas de revisiones de métodos mixtos.</p>
       </div>
       <div class="obj">
-        <h3>Formación y orientación</h3>
-        <p>Producir materiales de entrenamiento y ejemplos, desarrollar la orientación oficial sobre GRADE en revisiones de métodos mixtos para el GRADE Book, y difundir el enfoque entre los grupos que hacen este tipo de revisiones.</p>
+        <h3 data-es="Formación y orientación" data-en="Training and guidance">Formación y orientación</h3>
+        <p data-es="Producir materiales de entrenamiento y ejemplos, desarrollar la orientación oficial sobre GRADE en revisiones de métodos mixtos para el GRADE Book, y difundir el enfoque entre los grupos que hacen este tipo de revisiones." data-en="Produce training materials and examples, develop the official guidance on GRADE for mixed methods reviews for the GRADE Book, and disseminate the approach among groups conducting this type of review.">Producir materiales de entrenamiento y ejemplos, desarrollar la orientación oficial sobre GRADE en revisiones de métodos mixtos para el GRADE Book, y difundir el enfoque entre los grupos que hacen este tipo de revisiones.</p>
       </div>
     </div>
-    <p class="colab"><b>Colaboraciones:</b> el grupo trabaja articulado con los project groups de <b>Certainty of Evidence</b>, <b>CERQual</b> y <b>EtD</b> del GRADE working group, y recolecta ejemplos y casos de estudio de revisiones sistemáticas de métodos mixtos.</p>
+    <p class="colab"><b data-es="Colaboraciones:" data-en="Collaborations:">Colaboraciones:</b> <span data-es="el grupo trabaja articulado con los project groups de " data-en="the group works in close coordination with the ">el grupo trabaja articulado con los project groups de </span><b>Certainty of Evidence</b>, <b>CERQual</b> <span data-es="y" data-en="and">y</span> <b>EtD</b><span data-es=" del GRADE working group, y recolecta ejemplos y casos de estudio de revisiones sistemáticas de métodos mixtos." data-en=" project groups of the GRADE working group, and collects examples and case studies of mixed methods systematic reviews."> del GRADE working group, y recolecta ejemplos y casos de estudio de revisiones sistemáticas de métodos mixtos.</span></p>
   </div>
 </section>
 
 <section class="gris">
   <div class="inner">
     <div class="sec-head">
-      <div class="num">02 — Equipo</div>
-      <div><h2>Quiénes lo integran</h2></div>
+      <div class="num" data-es="02 — Equipo" data-en="02 — Team">02 — Equipo</div>
+      <div><h2 data-es="Quiénes lo integran" data-en="Who is involved">Quiénes lo integran</h2></div>
     </div>
     <div class="miembros">
       <div class="miembro">
-        <div class="rol">Líder</div>
+        <div class="rol" data-es="Líder" data-en="Lead">Líder</div>
         <h4>Juan José Yepes-Núñez</h4>
-        <p>Universidad de los Andes, Colombia · Director de la Colombia GRADE Network</p>
+        <p data-es="Universidad de los Andes, Colombia · Director de la Colombia GRADE Network" data-en="Universidad de los Andes, Colombia · Director of the Colombia GRADE Network">Universidad de los Andes, Colombia · Director de la Colombia GRADE Network</p>
       </div>
       <div class="miembro">
-        <div class="rol">Enlace G3</div>
+        <div class="rol" data-es="Enlace G3" data-en="G3 liaison">Enlace G3</div>
         <h4>Holger Schünemann</h4>
         <p>GRADE Guidance Group (G3)</p>
       </div>
       <div class="miembro">
-        <div class="rol">Historia</div>
-        <h4>Grupo co-fundado en 2023</h4>
-        <p>Por Juan José Yepes-Núñez y Claudia Valli, con la revisión del GRADE working group.</p>
+        <div class="rol" data-es="Historia" data-en="History">Historia</div>
+        <h4 data-es="Grupo co-fundado en 2023" data-en="Group co-founded in 2023">Grupo co-fundado en 2023</h4>
+        <p data-es="Por Juan José Yepes-Núñez y Claudia Valli, con la revisión del GRADE working group." data-en="By Juan José Yepes-Núñez and Claudia Valli, with review by the GRADE working group.">Por Juan José Yepes-Núñez y Claudia Valli, con la revisión del GRADE working group.</p>
       </div>
     </div>
-    <p class="colab" style="border-top:none;padding-top:0;margin-top:1.6rem"><b>Miembros:</b> Kelly Estrada Orozco, Olga Milena García, Óscar Muñoz Velandia, Andrés Mauricio García Sierra, Elodie Besnier, Gloria Isabel Niño Cruz, Ena Nino, Juan Camilo Cuya y Laura Yuriko González Teshima.</p>
+    <p class="colab" style="border-top:none;padding-top:0;margin-top:1.6rem"><b data-es="Miembros actuales:" data-en="Current members:">Miembros actuales:</b> <span data-es="Andrés Mauricio García Sierra, Elodie Besnier, Gloria Isabel Niño Cruz, Ena Nino, Juan Camilo Cuya y Laura Yuriko González Teshima." data-en="Andrés Mauricio García Sierra, Elodie Besnier, Gloria Isabel Niño Cruz, Ena Nino, Juan Camilo Cuya and Laura Yuriko González Teshima.">Andrés Mauricio García Sierra, Elodie Besnier, Gloria Isabel Niño Cruz, Ena Nino, Juan Camilo Cuya y Laura Yuriko González Teshima.</span></p>
   </div>
 </section>
 
 <section>
   <div class="inner">
     <div class="sec-head">
-      <div class="num">03 — Productos</div>
+      <div class="num" data-es="03 — Productos" data-en="03 — Deliverables">03 — Productos</div>
       <div>
-        <h2>Entregables y avances</h2>
-        <p>Plan de trabajo 2023–2026 del grupo.</p>
+        <h2 data-es="Entregables y avances" data-en="Deliverables and progress">Entregables y avances</h2>
+        <p data-es="Plan de trabajo 2023–2026 del grupo." data-en="The group's 2023–2026 work plan.">Plan de trabajo 2023–2026 del grupo.</p>
       </div>
     </div>
     <div class="pub">
       <div>
-        <div class="meta">Artículo 1 · Año 1</div>
-        <h3>Comentario sobre el uso de GRADE en revisiones sistemáticas de métodos mixtos</h3>
-        <p>Sometido al Journal of Clinical Epidemiology como primer producto del grupo.</p>
+        <div class="meta" data-es="Artículo 1 · Año 1" data-en="Paper 1 · Year 1">Artículo 1 · Año 1</div>
+        <h3 data-es="Comentario sobre el uso de GRADE en revisiones sistemáticas de métodos mixtos" data-en="Commentary on the use of GRADE in mixed methods systematic reviews">Comentario sobre el uso de GRADE en revisiones sistemáticas de métodos mixtos</h3>
+        <p data-es="Sometido al Journal of Clinical Epidemiology como primer producto del grupo." data-en="Submitted to the Journal of Clinical Epidemiology as the group's first deliverable.">Sometido al Journal of Clinical Epidemiology como primer producto del grupo.</p>
       </div>
-      <span class="pill curso">En curso</span>
+      <span class="pill curso" data-es="En curso" data-en="Ongoing">En curso</span>
     </div>
     <div class="pub">
       <div>
-        <div class="meta">Artículo 2 · Años 1–2</div>
-        <h3>Encuesta sistemática de marcos para evaluar la certeza de la evidencia en revisiones de métodos mixtos</h3>
-        <p>Identificación de marcos potenciales para la evaluación de la CiE en síntesis que integran evidencia cuantitativa y cualitativa.</p>
+        <div class="meta" data-es="Artículo 2 · Años 1–2" data-en="Paper 2 · Years 1–2">Artículo 2 · Años 1–2</div>
+        <h3 data-es="Encuesta sistemática de marcos para evaluar la certeza de la evidencia en revisiones de métodos mixtos" data-en="Systematic survey of frameworks for assessing the certainty of evidence in mixed methods reviews">Encuesta sistemática de marcos para evaluar la certeza de la evidencia en revisiones de métodos mixtos</h3>
+        <p data-es="Identificación de marcos potenciales para la evaluación de la CiE en síntesis que integran evidencia cuantitativa y cualitativa." data-en="Identification of potential frameworks for assessing CoE in syntheses that integrate quantitative and qualitative evidence.">Identificación de marcos potenciales para la evaluación de la CiE en síntesis que integran evidencia cuantitativa y cualitativa.</p>
       </div>
-      <span class="pill curso">En curso</span>
+      <span class="pill curso" data-es="En curso" data-en="Ongoing">En curso</span>
     </div>
     <div class="pub">
       <div>
-        <div class="meta">Artículo 3 · Año 2</div>
-        <h3>Encuesta sistemática de marcos para integrar datos cuantitativos y cualitativos en el desarrollo de guías</h3>
-        <p>Marcos de integración para la toma de decisiones y la formulación de recomendaciones.</p>
+        <div class="meta" data-es="Artículo 3 · Año 2" data-en="Paper 3 · Year 2">Artículo 3 · Año 2</div>
+        <h3 data-es="Encuesta sistemática de marcos para integrar datos cuantitativos y cualitativos en el desarrollo de guías" data-en="Systematic survey of frameworks for integrating quantitative and qualitative data in guideline development">Encuesta sistemática de marcos para integrar datos cuantitativos y cualitativos en el desarrollo de guías</h3>
+        <p data-es="Marcos de integración para la toma de decisiones y la formulación de recomendaciones." data-en="Integration frameworks for decision-making and the formulation of recommendations.">Marcos de integración para la toma de decisiones y la formulación de recomendaciones.</p>
       </div>
-      <span class="pill curso">En curso</span>
+      <span class="pill curso" data-es="En curso" data-en="Ongoing">En curso</span>
     </div>
     <div class="pub">
       <div>
-        <div class="meta">Años 2–3</div>
-        <h3>Casos de estudio y artículos de orientación GRADE</h3>
-        <p>Desarrollo de casos de estudio para evaluar el impacto del marco GRADE en la CiE de revisiones de métodos mixtos, y artículos de orientación oficial (certeza y uso de EtD) en colaboración con los grupos CERQual, Certainty of Evidence y EtD.</p>
+        <div class="meta" data-es="Años 2–3" data-en="Years 2–3">Años 2–3</div>
+        <h3 data-es="Casos de estudio y artículos de orientación GRADE" data-en="Case studies and GRADE guidance papers">Casos de estudio y artículos de orientación GRADE</h3>
+        <p data-es="Desarrollo de casos de estudio para evaluar el impacto del marco GRADE en la CiE de revisiones de métodos mixtos, y artículos de orientación oficial (certeza y uso de EtD) en colaboración con los grupos CERQual, Certainty of Evidence y EtD." data-en="Development of case studies to assess the impact of the GRADE framework on CoE in mixed methods reviews, and official guidance papers (certainty and EtD use) in collaboration with the CERQual, Certainty of Evidence and EtD groups.">Desarrollo de casos de estudio para evaluar el impacto del marco GRADE en la CiE de revisiones de métodos mixtos, y artículos de orientación oficial (certeza y uso de EtD) en colaboración con los grupos CERQual, Certainty of Evidence y EtD.</p>
       </div>
-      <span class="pill plan">Planeado</span>
+      <span class="pill plan" data-es="Planeado" data-en="Planned">Planeado</span>
     </div>
     <div class="pub">
       <div>
-        <div class="meta">Encuentros</div>
-        <h3>Reuniones y talleres</h3>
-        <p>Reunión de mapeo en el Cochrane Colloquium 2023, teleconferencias periódicas del grupo y al menos un taller o webinar por año en encuentros del GRADE working group.</p>
+        <div class="meta" data-es="Encuentros" data-en="Meetings">Encuentros</div>
+        <h3 data-es="Reuniones y talleres" data-en="Meetings and workshops">Reuniones y talleres</h3>
+        <p data-es="Reunión de mapeo en el Cochrane Colloquium 2023, teleconferencias periódicas del grupo y al menos un taller o webinar por año en encuentros del GRADE working group." data-en="Mapping meeting at the Cochrane Colloquium 2023, periodic group teleconferences, and at least one workshop or webinar per year at GRADE working group meetings.">Reunión de mapeo en el Cochrane Colloquium 2023, teleconferencias periódicas del grupo y al menos un taller o webinar por año en encuentros del GRADE working group.</p>
       </div>
-      <span class="pill done">Activo</span>
+      <span class="pill done" data-es="Activo" data-en="Active">Activo</span>
     </div>
   </div>
 </section>
 
 <div class="cta">
-  <h2>¿Trabajas con <em>métodos mixtos</em>?</h2>
-  <p>El grupo recolecta ejemplos de revisiones sistemáticas de métodos mixtos y está abierto a investigadores interesados en la integración de evidencia cualitativa y cuantitativa en el enfoque GRADE.</p>
-  <a class="btn" href="mailto:co@gradeworkinggroup.org?subject=GRADE%20Mixed%20Methods%20Project%20Group">Escríbenos</a>
+  <h2><span data-es="¿Trabajas con " data-en="Do you work with ">¿Trabajas con </span><em data-es="métodos mixtos" data-en="mixed methods">métodos mixtos</em><span data-es="?" data-en="?">?</span></h2>
+  <p data-es="El grupo recolecta ejemplos de revisiones sistemáticas de métodos mixtos y está abierto a investigadores interesados en la integración de evidencia cualitativa y cuantitativa en el enfoque GRADE." data-en="The group collects examples of mixed methods systematic reviews and is open to researchers interested in the integration of qualitative and quantitative evidence within the GRADE approach.">El grupo recolecta ejemplos de revisiones sistemáticas de métodos mixtos y está abierto a investigadores interesados en la integración de evidencia cualitativa y cuantitativa en el enfoque GRADE.</p>
+  <a class="btn" href="mailto:co@gradeworkinggroup.org?subject=GRADE%20Mixed%20Methods%20Project%20Group" data-es="Escríbenos" data-en="Write to us">Escríbenos</a>
 </div>
 
 <footer>
   <div class="inner">
     <span>© 2026 GRADE Mixed Methods Project Group · Colombia GRADE Network</span>
-    <span><a href="index.html">Inicio</a> · <a href="https://www.gradeworkinggroup.org" target="_blank" rel="noopener">GRADE working group</a></span>
+    <span><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a> · <a href="https://www.gradeworkinggroup.org" target="_blank" rel="noopener">GRADE working group</a></span>
   </div>
 </footer>
+
+<script>
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-es]').forEach(function(el){
+    var t = el.getAttribute('data-' + lang);
+    if(t !== null && t !== '') el.textContent = t;
+  });
+  document.getElementById('btn-es').classList.toggle('active', lang==='es');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  try{localStorage.setItem('grade-co-lang', lang);}catch(e){}
+}
+(function(){
+  try{
+    var saved = localStorage.getItem('grade-co-lang');
+    if(saved === 'en') setLang('en');
+  }catch(e){}
+})();
+</script>
 
 </body>
 </html>
